@@ -17,10 +17,11 @@ Relink the docker containers to use goinfre
 
 Clone this repo into a empty directory on your mac (~/Documents)
 
-## Using the Container
 Run the Build script:
 
 ```./build```
+
+## Using the Container
 
 To run the container, run the start script from the directory you want to debug from:
 
