@@ -23,13 +23,27 @@ Run the Build script:
 
 ## Using the Container
 
+### Running without the path in bashrc or zshrc
+
 To run the container, run the start script from the directory you want to debug from:
 
-```~/Documents/libft/ ~/Documents/<Where this repos is saved>/start```
+```cd /<directory_to_use>```
+
+```~/Documents/<Where this repo is cloned>/start```
 
 To run commands within the container you can use the run script:
 
+``` cd /<where this repo is cloned>```
+
 ```./run <cmd to execute in container> <arguments for command>```
+
+### Running with the path in bashrc or zshrc
+
+If you want to just use the start script or the run script without referencing the directory where this repo is stored, then you can add the path to the scrips in your .bashrc or .zshrc file as follows at the bottom:
+
+```PATH=$PATH:/Users/<username>/<Directory where this repo is cloned>```
+
+For example: ```PATH=$PATH:/Users/dfurneau/Documents/Tools/Valgrind```
 
 ## Enjoy
 As always if you have issues or find bug, please do a Pull Request (PR) and provide a solution.
