@@ -34,7 +34,7 @@ If you want to just use the start script or the run script without referencing t
 
 ```export PATH=$PATH:/Users/<username>/<Directory where this repo is cloned>```
 
-For example: ```PATH=$PATH:/Users/dfurneau/Documents/Tools/Valgrind```
+For example: ```PATH=$PATH:/Users/dfurneau/Documents/Tools/42-Valgrind```
 
 ### (OPTION) Running without the path in bashrc or zshrc
 
