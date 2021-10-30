@@ -24,12 +24,14 @@ Run the Build script:
 
 ## Using the Container
 The start script will automatically share the current directory into the container.
+cd into your source code directory where you want to compile and run valgrind.  Type ```start```, you will see a ```[DOCKER]->``` prompt.  The prompt indicates
+that you are in the docker container, from there you can execute valgrind.
 
 ### (RECOMMENDED) Running with the path in bashrc or zshrc
 
 If you want to just use the start script or the run script without referencing the directory where this repo is stored, then you can add the path to the scrips in your .bashrc or .zshrc file as follows at the bottom:
 
-```PATH=$PATH:/Users/<username>/<Directory where this repo is cloned>```
+```export PATH=$PATH:/Users/<username>/<Directory where this repo is cloned>```
 
 For example: ```PATH=$PATH:/Users/dfurneau/Documents/Tools/Valgrind```
 
