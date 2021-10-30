@@ -26,6 +26,8 @@ Run the Build script:
 The start script will automatically share the current directory into the container.
 cd into your source code directory where you want to compile your program and run valgrind.  Type ```start```, you will see a ```[DOCKER]->``` prompt.  The prompt indicates that you are in the docker container, from there you can execute valgrind.
 
+To exit the docker container, type ```exit```, this will take you back to the mac-osx shell prompt.
+
 ### (RECOMMENDED) Running with the path in bashrc or zshrc
 
 If you want to just use the start script or the run script without referencing the directory where this repo is stored, then you can add the path to the scrips in your .bashrc or .zshrc file as follows at the bottom:
