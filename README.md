@@ -32,9 +32,9 @@ To exit the docker container, type ```exit```, this will take you back to the ma
 
 If you want to just use the start script or the run script without referencing the directory where this repo is stored, then you can add the path to the scrips in your .bashrc or .zshrc file as follows at the bottom:
 
-```export PATH=$PATH:/Users/<username>/<Directory where this repo is cloned>```
+```PATH=$PATH:/Users/<username>/<Directory where this repo is cloned>```
 
-For example: ```export PATH=$PATH:/Users/dfurneau/Documents/Tools/42-ValgrindContainer```
+For example: ```PATH=$PATH:/Users/dfurneau/Documents/Tools/42-ValgrindContainer```
 
 ### (OPTION) Running without the path in bashrc or zshrc
 
