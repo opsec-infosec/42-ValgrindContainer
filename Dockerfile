@@ -1,5 +1,5 @@
 #################
-# 42 Devcontainer
+# 42 Valgrind Container
 
 FROM ubuntu:latest
 
