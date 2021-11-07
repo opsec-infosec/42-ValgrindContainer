@@ -44,6 +44,8 @@ To run the container, run the start script from the directory you want to debug 
 
 ```~/Documents/<Where this repo is cloned>/start```
 
+### Running internal shell commands from outside the container
+
 To run commands within the container you can use the run script:
 
 ``` cd /<where this repo is cloned>```
