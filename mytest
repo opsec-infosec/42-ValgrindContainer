@@ -1,19 +1,20 @@
 #!/bin/bash
 
-# get pid for appliction
-pid=`ps -ef | grep "docker" | grep -v "grep" | awk '{print $2}'`
 
+# close appliction by name
+pid=`ps -ef | grep "docker" | grep -v "grep" | awk '{print $2}'`
 echo "pid: $pid"
 
-# kill appliction by name
-kill -9 $pid
-
+test -z "$(docker ps -q 2>/dev/null)" && osascript -e 'quit app "Docker"'
+wait 
 echo "kill docker"
 echo "done"
 echo "=========================================================="
+
+# open --background -a Docker
+# echo "open docker"
+# echo "done"
+# echo "=========================================================="
+
 pid=`ps -ef | grep "docker" | grep -v "grep" | awk '{print $2}'`
-
 echo "pid: $pid"
-
-# start appliction by name
-nohup dockerd &
