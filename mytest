@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# get pid for appliction
+pid=`ps -ef | grep "docker" | grep -v "grep" | awk '{print $2}'`
+
+echo "pid: $pid"
+
+# kill appliction by name
+kill -9 $pid
+
+echo "kill docker"
+echo "done"
+echo "=========================================================="
+pid=`ps -ef | grep "docker" | grep -v "grep" | awk '{print $2}'`
+
+echo "pid: $pid"
+
+# start appliction by name
+nohup dockerd &
