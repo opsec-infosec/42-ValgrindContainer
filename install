@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+GRAY='\033[0;37m'
+NC='\033[0m'
+
+# build file path
+buildPath="./build"
+
+if [ -x "$(command -v docker)" ]; then
+    echo -e "${GREEN}good sound, you have docker on your system 😎😁${NC}"
+    sleep 1
+    # kill dokcer
+    test -z "$(docker ps -q 2>/dev/null)" && osascript -e 'quit app "Docker"'
+    sleep 2
+    # command
+else
+    echo -e "${RED}you need install docker on your system from${NC} "
+    sleep 2
+    echo -e "${YELLOW}Managed Software Center will Open Now${NC}"
+    sleep 2
+    # open Managed Software Center
+    '/Applications/Managed Software Center.app/Contents/MacOS/Managed Software Center'
+    echo -e "${GREEN}install Docker from Managed Software Center 🤖 ${NC}"
+    # press enter to continue
+    read -p "Press [Enter] key to continue..."
+fi
+
+echo -e "${YELLOW}Are you run this Script On 42 lab? (y/n)${NC}"
+read answer42
+
+if [ "$answer42" = "y" ]; then
+    echo -e "${GREEN}You are on 42 lab${NC}"
+    mkdir -p ~/goinfre/docker
+    echo -e "${GRAY}mkdir -p ~/goinfre/docker${NC}"
+    sleep 1
+    rm -rf ~/Library/Containers/com.docker.docker
+    echo -e "${GRAY}rm -rf ~/Library/Containers/com.docker.docker${NC}"
+    sleep 1
+    ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
+    echo -e "${GRAY}ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker${NC}"
+    sleep 1
+    echo -e "${YELLOW}Do you installed zsh on your device? (y/n)${NC}"
+    read answerzsh
+    if [ "$answerzsh" = "y" ]; 
+      then
+        echo -e "${GREEN}add path to ${YELLOW}~/.zshrc${NC}"
+        sleep 1
+        echo PATH=\$PATH:$(pwd)  | tee -a ~/.zshrc
+      else
+        echo -e "${GREEN}Add Path to ${YELLOW}~/.bashrc${NC}"
+        sleep 1
+        echo PATH=\$PATH:$(pwd)  | tee -a ~/.bashrc
+    fi # end if answerzsh
+else
+  echo -e "${RED}Only For 42 lab, and script exit${NC}"
+  exit
+fi  # end if answer42
+
+
+if [ ! "$(docker images -a | grep valgrind)" ] ;then
+  echo "install for you valgrind 🍽"
+  chmod a+rwx "$buildPath"
+  $buildPath
+  wait
+  exit
+else 
+  echo "good every thing fine 😇"
+  exit
+fi
