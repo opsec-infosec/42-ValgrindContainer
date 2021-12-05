@@ -1,29 +1,12 @@
+# THIS IS FOR INSIDE 42 INSTALL ON MAC'S IN LAB
 # Valgrind Docker Container for Development in 42
 This container is for running Valgrind in the 42 Labs.
 
 ## Installation Requirements
 
+-------========= FOR INSIDE 42 LABS ONLY =========-------
+
 Install docker from the Managed Sofware Center
-
-
-***Run Script Shell install to setup every thing for you***
-
-Step One 
-```
-chmod +x install
-``` 
-Step Two
-
-```
-./install
-```
-if you don't install [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) on you device you answer  ```No``` or ```Yes``` if you installed .
-
-
-
-***or do everything manually*** 
-
-
 
 Make a directory in goinfre
 ```mkdir -p ~/goinfre/docker```
