@@ -31,7 +31,7 @@ if [ "$answer42" = "y" ]; then
       echo -e "${YELLOW}Managed Software Center will Open Now${NC}"
       echo -e "${YELLOW}if Docker installed Done plase close Managed Software Center to continue ${NC}"
       # open Managed Software Center
-      '/Applications/Managed Software Center.app/Contents/MacOS/Managed Software Center'
+      open -a '/Applications/Managed Software Center.app/Contents/MacOS/Managed Software Center'
     fi
     echo -e "${YELLOW}Do you want to continue? (y/n)${NC}"
     read answer
