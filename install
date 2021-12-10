@@ -10,7 +10,7 @@ NC='\033[0m'
 # build file path
 buildPath="./build"
 
-echo -e "${YELLOW}Are you run this Script On 42 lab? (y/n)${NC}"
+echo -e "${YELLOW}Are you in 42 lab? (y/n)${NC}"
 read answer42
 
 if [ "$answer42" = "y" ]; then
