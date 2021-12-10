@@ -41,6 +41,11 @@ if [ "$answer42" = "y" ]; then
         echo -e "${RED}You are not in 42 lab${NC}"
         exit 1
     fi
+    if [ "$(docker ps)" ]; then
+        echo -e "${YELLOW}Docker is running, we will kill it${NC}"
+        test -z "$(docker ps -q 2>/dev/null)" && osascript -e 'quit app "Docker"'
+        sleep 1
+    fi
     # wait till docker work well
     echo -e "${YELLOW}Wait till docker is Running${NC}"
     mkdir -p ~/goinfre/docker
