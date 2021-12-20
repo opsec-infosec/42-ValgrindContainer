@@ -10,7 +10,7 @@ This container is for running Valgrind in the 42 Labs.
 
 ## AUTOMATIC INSTALL
 
-Clone Repo to your 42 Lab Machine
+Clone Repo to your 42 Lab Machine.  Do not rename the repo, as the scripts use the clone name as references...
 Execute the install script:
 ```bash ./install```
 Follow the instruction provided in the install script.  When the Managed Software Center opens, be sure to install Docker, then continue with the install
