@@ -72,6 +72,7 @@ if [ "$answer42" = "y" ]; then
         else
             echo -e "${GRAY}add path to .zshrc${NC}"
             echo PATH=\$PATH:$(pwd)  | tee -a ~/.zshrc
+            source ~/.zshrc
             echo -e "${GREEN}path added to .zshrc${NC}"
         fi
       else
@@ -80,6 +81,7 @@ if [ "$answer42" = "y" ]; then
         else
             echo -e "${GRAY}add path to .bashrc${NC}"
             echo PATH=\$PATH:$(pwd)  | tee -a ~/.bashrc
+            source ~/.bashrc
             echo -e "${GREEN}path added to .bashrc${NC}"
         fi
     fi # end if answerzsh
