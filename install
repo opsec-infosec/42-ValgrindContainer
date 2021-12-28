@@ -35,7 +35,7 @@ if [ "$answer42" = "y" ]; then
       # open Managed Software Center
       open -a '/Applications/Managed Software Center.app/Contents/MacOS/Managed Software Center'
     fi
-    echo -e "${YELLOW}Do you want to continue? (y/n)${NC}"
+    echo -e "${YELLOW}Is Docker Installed, Please wait for docker installation to complete? (y/n)${NC}"
     read answer
     if [ "$answer" = "y" ]; then
         echo -e "${GREEN}Good${NC}"
