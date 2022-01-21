@@ -17,7 +17,7 @@ RUN apt-get update --no-install-recommends -y && apt-get install --no-install-re
     'ca-certificates' \
     'g++' \
     'libtool' \
-    'pkg-config' \ 
+    'pkg-config' \
     'manpages-dev' \
     'zip' \
     'unzip' \
@@ -33,10 +33,11 @@ RUN apt-get update --no-install-recommends -y && apt-get install --no-install-re
     'wget' \
     'zsh' \
     'nano' \
-    'vim' -y \
+    'vim' \
+	'libreadline6-dev' -y \
     && apt-get clean autoclean \
     && apt-get autoremove --yes \
-    && rm -rf /var/lib/{apt,dpkg,cache,log}/ 
+    && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 # Install 42 Norminette
 RUN python3 -m pip install --upgrade pip setuptools && python3 -m pip install norminette && mkdir -p /home/vscode/src
@@ -50,4 +51,4 @@ ENV DEBIAN_FRONTEND=dialog
 
 
 LABEL maintainer="Dale Furneaux <opinfosec>" \
-      version="1.0.0"
+      version="2.0.0"
