@@ -1,0 +1,11 @@
+{
+    "idleHeartbeats": 0,
+    "navigatingHeartbeats": 18,
+    "totalCodingHeartbeats": 55,
+    "languageHeartbeats": {
+        "shellscript": 55
+    },
+    "fileHeartbeats": {
+        "build": 55
+    }
+}
