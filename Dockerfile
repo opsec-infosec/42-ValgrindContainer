@@ -34,7 +34,7 @@ RUN apt-get update --no-install-recommends -y && apt-get install --no-install-re
     'zsh' \
     'nano' \
     'vim' \
-	'libreadline6-dev' -y \
+    'libreadline-dev' -y \
     && apt-get clean autoclean \
     && apt-get autoremove --yes \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
