@@ -48,6 +48,8 @@ RUN sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 WORKDIR /home/vscode/src
 
 ENV DEBIAN_FRONTEND=dialog
+# Add Return Code in prompt for bash
+ENV PROMPT_COMMAND='RET=$?; echo -n "[$RET] "'
 
 
 LABEL maintainer="Dale Furneaux <opinfosec>" \
