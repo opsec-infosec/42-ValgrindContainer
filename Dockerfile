@@ -1,7 +1,7 @@
 #################
 # 42 Valgrind Container
 
-FROM ubuntu:latest
+FROM ubuntu:focal
 
 # Suppress an apt-key warning about standard out not being a terminal. Use in this script is safe.
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
