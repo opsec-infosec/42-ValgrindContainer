@@ -34,7 +34,7 @@ RUN apt-get update --no-install-recommends -y && apt-get install --no-install-re
     'zsh' \
     'nano' \
     'vim' \
-	'libreadline6-dev' -y \
+    'libreadline-dev' -y \
     && apt-get clean autoclean \
     && apt-get autoremove --yes \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
@@ -48,6 +48,8 @@ RUN sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 WORKDIR /home/vscode/src
 
 ENV DEBIAN_FRONTEND=dialog
+# Add Return Code in prompt for bash
+ENV PROMPT_COMMAND='RET=$?; echo -n "[$RET] "'
 
 
 LABEL maintainer="Dale Furneaux <opinfosec>" \
