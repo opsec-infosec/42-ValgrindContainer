@@ -36,7 +36,7 @@ RUN apt-get update --no-install-recommends -y && apt-get install --no-install-re
     'vim' \
     'libreadline-dev' \
     'moreutils' \
-    'htop' -y
+    'htop' -y \
     && apt-get clean autoclean \
     && apt-get autoremove --yes \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
