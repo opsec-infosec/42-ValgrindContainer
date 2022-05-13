@@ -35,7 +35,8 @@ RUN apt-get update --no-install-recommends -y && apt-get install --no-install-re
     'nano' \
     'vim' \
     'libreadline-dev' \
-	'moreutils' -y \
+    'moreutils' \
+    'htop' -y
     && apt-get clean autoclean \
     && apt-get autoremove --yes \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
