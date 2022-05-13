@@ -3,3 +3,4 @@
 name=`docker ps --all | grep valgrind | awk '{print $(NF)}'`
 
 docker stop $name
+dockr rm $name
