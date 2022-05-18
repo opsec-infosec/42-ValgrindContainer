@@ -36,6 +36,7 @@ RUN apt-get update --no-install-recommends -y && apt-get install --no-install-re
     'vim' \
     'libreadline-dev' \
     'moreutils' \
+    'ruby' \
     'htop' -y \
     && apt-get clean autoclean \
     && apt-get autoremove --yes \
