@@ -14,6 +14,7 @@ Clone Repo to your 42 Lab Machine.  Do not rename the repo, as the scripts use t
 Execute the install script:
 ```bash ./install```
 Follow the instruction provided in the install script.  When the Managed Software Center opens, be sure to install Docker, then continue with the install
+After installation, close the terminal and reopen.
 
 ## MANUAL INSTALL
 Install docker from the Managed Sofware Center
