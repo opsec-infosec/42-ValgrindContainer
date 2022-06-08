@@ -15,12 +15,12 @@ buildPath="./build"
 echo -e "${YELLOW}Are you in 42 lab? (y/n)${NC}"
 read answer42
 
-if [ "$answer42" = "y" ]; then
+if [ "$answer42" = "y" || "$answer42" = "Y" ]; then
     echo -e "${GREEN}Are in 42 lab${NC}"
     if [ -x "$(command -v docker-compose)" ]; then
         echo -e "${GREEN}Good news, you have docker on your system 😎😁${NC}"
         sleep 1
-        # check docker if runing if true kill it
+        # check docker if running if true kill it
         if [ "$(docker ps)" ]; then
             echo -e "${YELLOW}Docker is running, we will kill it${NC}"
             test -z "$(docker ps -q 2>/dev/null)" && osascript -e 'quit app "Docker"'
@@ -31,16 +31,16 @@ if [ "$answer42" = "y" ]; then
       echo -e "${RED}You need install docker on your system from${NC} "
       sleep 2
       echo -e "${YELLOW}Managed Software Center will Open Now${NC}"
-      echo -e "${YELLOW}if Docker install is done plase close Managed Software Center to continue ${NC}"
+      echo -e "${YELLOW}if Docker install is done please close Managed Software Center to continue ${NC}"
       # open Managed Software Center
       open -a '/Applications/Managed Software Center.app/Contents/MacOS/Managed Software Center'
     fi
     echo -e "${YELLOW}Is Docker Installed, Please wait for docker installation to complete? (y/n)${NC}"
     read answer
-    if [ "$answer" = "y" ]; then
+    if [ "$answer" = "y" || "$answer" = "Y" ]; then
         echo -e "${GREEN}Good${NC}"
     else
-        echo -e "${RED}You are not in 42 lab${NC}"
+        echo -e "${RED}You are not in a 42 lab${NC}"
         exit 1
     fi
   #  if [ "$(docker ps)" ]; then
@@ -61,7 +61,7 @@ if [ "$answer42" = "y" ]; then
     sleep 1
     echo -e "${YELLOW}Did you install zsh on your Mac? (y/n)${NC}"
     read answerzsh
-    if [ "$answerzsh" = "y" ]; 
+    if [ "$answerzsh" = "y" || "$answerzsh" = "Y"]; 
       then
 
         echo -e "${GREEN}add path to ${YELLOW}~/.zshrc${NC}"
