@@ -15,7 +15,7 @@ buildPath="./build"
 echo -e "${YELLOW}Are you in 42 lab? (y/n)${NC}"
 read answer42
 
-if [ "$answer42" = "y" || "$answer42" = "Y" ]; then
+if [ "$answer42" = "y" ] || [ "$answer42" = "Y" ]; then
     echo -e "${GREEN}Are in 42 lab${NC}"
     if [ -x "$(command -v docker-compose)" ]; then
         echo -e "${GREEN}Good news, you have docker on your system 😎😁${NC}"
@@ -37,7 +37,7 @@ if [ "$answer42" = "y" || "$answer42" = "Y" ]; then
     fi
     echo -e "${YELLOW}Is Docker Installed, Please wait for docker installation to complete? (y/n)${NC}"
     read answer
-    if [ "$answer" = "y" || "$answer" = "Y" ]; then
+    if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
         echo -e "${GREEN}Good${NC}"
     else
         echo -e "${RED}You are not in a 42 lab${NC}"
@@ -61,7 +61,7 @@ if [ "$answer42" = "y" || "$answer42" = "Y" ]; then
     sleep 1
     echo -e "${YELLOW}Did you install zsh on your Mac? (y/n)${NC}"
     read answerzsh
-    if [ "$answerzsh" = "y" || "$answerzsh" = "Y"]; 
+    if [ "$answerzsh" = "y" ] || [ "$answerzsh" = "Y" ]; 
       then
 
         echo -e "${GREEN}add path to ${YELLOW}~/.zshrc${NC}"
