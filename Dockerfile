@@ -49,7 +49,7 @@ RUN python3 -m pip install --upgrade pip setuptools && python3 -m pip install no
 RUN sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" && echo 'PROMPT=%B%F{blue}[DOCKER]%f%b$PROMPT' >> /root/.zshrc
 
 # Remove symlink to c++ and replace with g++
-RUN rm /usb/bin/c++ && ln -s /usr/bin/g++ /usr/bin/c++
+RUN rm /usr/bin/c++ && ln -s /usr/bin/g++ /usr/bin/c++
 
 WORKDIR /home/vscode/src
 
