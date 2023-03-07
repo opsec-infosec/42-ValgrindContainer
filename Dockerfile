@@ -37,7 +37,10 @@ RUN apt-get update --no-install-recommends -y && apt-get install --no-install-re
     'libreadline-dev' \
     'moreutils' \
     'ruby' \
-    'htop' -y \
+    'htop' \
+    'netcat' \
+    'tcpdump' \
+    -y \
     && apt-get clean autoclean \
     && apt-get autoremove --yes \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/
@@ -59,4 +62,4 @@ ENV PROMPT_COMMAND='RET=$?; echo -n "[$RET] "'
 
 
 LABEL maintainer="Dale Furneaux <opinfosec>" \
-      version="2.1.0"
+      version="2.2.0"
