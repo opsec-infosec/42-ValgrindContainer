@@ -38,6 +38,7 @@ RUN apt-get update --no-install-recommends -y && apt-get install --no-install-re
     'moreutils' \
     'ruby' \
     'htop' \
+    'irssi' \
     'netcat' \
     'tcpdump' \
     -y \
@@ -62,4 +63,4 @@ ENV PROMPT_COMMAND='RET=$?; echo -n "[$RET] "'
 
 
 LABEL maintainer="Dale Furneaux <opinfosec>" \
-      version="2.2.0"
+      version="2.3.0"
