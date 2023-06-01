@@ -50,14 +50,14 @@ if [ "$answer42" = "y" ] || [ "$answer42" = "Y" ]; then
   #  fi
     # wait till docker work well
     echo -e "${YELLOW}Wait till docker is Running${NC}"
-    mkdir -p ~/goinfre/docker
-    echo -e "${GRAY}mkdir -p ~/goinfre/docker${NC}"
+    mkdir -p ~/goinfre/com.docker.docker
+    echo -e "${GRAY}mkdir -p ~/goinfre/com.docker.docker${NC}"
     sleep 1
     rm -rf ~/Library/Containers/com.docker.docker
     echo -e "${GRAY}rm -rf ~/Library/Containers/com.docker.docker${NC}"
     sleep 1
-    ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
-    echo -e "${GRAY}ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker${NC}"
+    ln -s ~/goinfre/com.docker.docker ~/Library/Containers/com.docker.docker
+    echo -e "${GRAY}ln -s ~/goinfre/com.docker.docker ~/Library/Containers/com.docker.docker${NC}"
     sleep 1
     echo -e "${YELLOW}Did you install zsh on your Mac? (y/n)${NC}"
     read answerzsh
