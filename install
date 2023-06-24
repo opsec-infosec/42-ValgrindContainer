@@ -52,7 +52,7 @@ if [ "$answer42" = "y" ] || [ "$answer42" = "Y" ]; then
     rm -rf ~/goinfre/docker
     echo -e "${YELLOW}Wait till docker is Running${NC}"
     mkdir -p ~/goinfre/com.docker.docker
-    echo -e "${GRAY}mkdir -p ~/goinfre/com.docker${NC}"
+    echo -e "${GRAY}mkdir -p ~/goinfre/com.docker.docker${NC}"
     sleep 1
     rm -rf ~/Library/Containers/com.docker.docker
     echo -e "${GRAY}rm -rf ~/Library/Containers/com.docker.docker${NC}"
