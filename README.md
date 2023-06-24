@@ -20,7 +20,7 @@ After installation, close the terminal and reopen.
 Install docker from the Managed Sofware Center
 
 Make a directory in goinfre
-```mkdir -p ~/goinfre/docker```
+```mkdir -p ~/goinfre/com.docker.docker```
 
 Add the above to the bottom of your .zshrc or .bashrc file.  This allways creates the directory if it doesn't exist when you move to a different machine in the lab.
 
@@ -28,7 +28,7 @@ Relink the docker containers to use goinfre
 
 ```rm -rf ~/Library/Containers/com.docker.docker```
 
-```ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker```
+```ln -s ~/goinfre/com.docker.docker ~/Library/Containers/com.docker.docker```
 
 Clone this repo into a empty directory on your mac (~/Documents)
 
