@@ -1,6 +1,9 @@
 #!/bin/bash
 
-chmod a+x ./stop && chmod a+x ./start && chmod a+x ./run && chmod a+x ./bgnd
+# repo path
+repoPath=$(find $HOME -type d -name 42-ValgrindContainer 2>/dev/null)
+
+chmod a+x $repoPath/stop && chmod a+x $repoPath/start && chmod a+x $repoPath/run && chmod a+x $repoPath/bgnd
 
 # Colors
 RED='\033[0;31m'
@@ -10,7 +13,7 @@ GRAY='\033[0;37m'
 NC='\033[0m'
 
 # build file path
-buildPath="./build"
+buildPath="$repoPath/build"
 
 echo -e "${YELLOW}Are you in 42 lab? (y/n)${NC}"
 read answer42
