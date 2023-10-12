@@ -20,7 +20,7 @@ After installation, close the terminal and reopen.
 
 To create an alias to install the container and run the alias from anywhere:
 - Clone Repo to your 42 Lab Machine.  Do not rename the repo, as the scripts use the clone name as references.
-- Add your alias in .zshrc if you're using zsh or oh-my-zsh. Should look something like the below:
+- Add your alias in .zshrc if you're using zsh or oh-my-zsh. Should look like:
 ```alias install_valgrind='bash path/to/repo/install'```
 - Run the alias command:
 ```install_valgrind```
