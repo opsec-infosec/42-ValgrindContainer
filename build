@@ -1,2 +1,6 @@
 #!/bin/bash
+
+#repo path
+repoPath=$(find $HOME -type d -name 42-ValgrindContainer 2>/dev/null)
+
 docker build . -t valgrind

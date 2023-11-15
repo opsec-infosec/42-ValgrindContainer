@@ -16,6 +16,17 @@ Execute the install script:
 Follow the instruction provided in the install script.  When the Managed Software Center opens, be sure to install Docker, then continue with the install.
 After installation, close the terminal and reopen.
 
+## INSTALL WTIH ALIAS
+
+To create an alias to install the container and run the alias from anywhere:
+- Clone Repo to your 42 Lab Machine.  Do not rename the repo, as the scripts use the clone name as references.
+- Add your alias in .zshrc if you're using zsh or oh-my-zsh. Should look like:
+```alias install_valgrind='bash path/to/repo/install'```
+- Run the alias command:
+```install_valgrind```
+- Follow the instruction provided in the install script.  When the Managed Software Center opens, be sure to install Docker, then continue with the install.
+- After installation, close the terminal and reopen.
+
 ## MANUAL INSTALL
 Install docker from the Managed Sofware Center
 
