@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+GRAY='\033[0;37m'
+NC='\033[0m'
+
+# Checks of docker is running
+docker ps > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    echo -e "${YELLOW}Docker is running! 🤔, would you like to proceed ? (y/n)${NC}"
+    read answer
+    if [ "$answer" != "y" ] && [ "$answer" != "Y" ]; then
+      echo -e "Thanks for all the FISH${NC}"
+      exit 1
+    fi  
+    test -z "$(docker ps -q 2>/dev/null)" && osascript -e 'quit app "Docker"'
+    sleep 1
+fi
+
+# Removing existing Docker configurations
+rm -rf ~/Library/Group\ Containers/group.com.docker;
+rm -rf ~/Library/Caches/com.docker.docker;
+rm -rf ~/Library/PrivilegedHelperTools/com.docker.vmnetd;
+rm -rf ~/Library/Preferences/com.docker.docker.plist;
+rm -rf ~/goinfre/docker
+
+# Wait till docker is running
+echo -e "${YELLOW}Wait till docker is Running${NC}"
+mkdir -p ~/goinfre/com.docker.docker
+echo -e "${GRAY}mkdir -p ~/goinfre/com.docker.docker${NC}"
+rm -rf ~/Library/Containers/com.docker.docker
+echo -e "${GRAY}rm -rf ~/Library/Containers/com.docker.docker${NC}"
+ln -s ~/goinfre/com.docker.docker ~/Library/Containers/com.docker.docker
+echo -e "${GRAY}ln -s ~/goinfre/com.docker.docker ~/Library/Containers/com.docker.docker${NC}"
+
+open -a Docker
+# loop docker ps if true break loop
+while true; do
+  docker ps > /dev/null 2>&1
+  if [ $? -eq 0 ]; then
+    echo -e "${GREEN}Docker is running${NC}"
+    break
+  else
+    echo -e "${RED}Waiting for Docker to run${NC}"
+    sleep 1
+  fi
+done
+
+if [ "$(docker ps -a)" ] ;then
+  echo -e "Everything is Fine... Prepare to listen to Vogon Poetry! 😇"
+  exit
+fi
