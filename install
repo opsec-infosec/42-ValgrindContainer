@@ -3,7 +3,7 @@
 # repo path
 repoPath=$(find $HOME -type d -name 42-ValgrindContainer 2>/dev/null)
 
-chmod a+x $repoPath/stop && chmod a+x $repoPath/start && chmod a+x $repoPath/run && chmod a+x $repoPath/bgnd
+chmod a+x $repoPath/stop && chmod a+x $repoPath/start && chmod a+x $repoPath/run && chmod a+x $repoPath/bgnd && chmod a+x $repoPath/reset
 
 # Colors
 RED='\033[0;31m'
@@ -12,14 +12,18 @@ YELLOW='\033[0;33m'
 GRAY='\033[0;37m'
 NC='\033[0m'
 
+# Get the user's hostname
+userHost=$(hostname)
+
+# Regex pattern for 42 hostnames
+fortyTwoHosts='^lab[0-9]r(0?[1-9]|1[0-9]|20)s([1-9]|1[0-9]|20)\.42[a-zA-Z]+\.([a-zA-Z]{2})$'
+
 # build file path
 buildPath="$repoPath/build"
 
-echo -e "${YELLOW}Are you in 42 lab? (y/n)${NC}"
-read answer42
-
-if [ "$answer42" = "y" ] || [ "$answer42" = "Y" ]; then
-    echo -e "${GREEN}Are in 42 lab${NC}"
+# check if user in for 42 lab
+echo -e "${GREEN}This only for 42 lab${NC}"
+if [[ "$userHost" =~ $fortyTwoHosts ]]; then
     if [ -x "$(command -v docker-compose)" ]; then
         echo -e "${GREEN}Good news, you have docker on your system 😎😁${NC}"
         sleep 1

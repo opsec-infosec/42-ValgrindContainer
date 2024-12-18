@@ -82,6 +82,9 @@ To run commands within the container you can use the run script:
 
 ```./run <cmd to execute in container> <arguments for command>```
 
+# Reset, clean up, and prepare Docker configurations for use
+
+If you just struggling to open Docker in 42 labs or you get this error "A JavaScript error occurred in the main process" use reset script, it will open Docker for use without installing valgrind image.
 
 ## Enjoy
 As always if you have issues or find bug, please do a Pull Request (PR) and provide a solution.
