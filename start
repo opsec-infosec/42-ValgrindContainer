@@ -1,3 +1,24 @@
 #!/bin/bash
 
+docker ps > /dev/null 2>&1
+if [ ! $? -eq 0 ]; then
+	open -a docker
+	echo -n "waiting for docker to start "
+	while true; do
+		docker ps > /dev/null 2>&1
+		if [ $? -eq 0 ]; then
+			echo
+			break;
+		else
+			echo -n "."
+			sleep 1
+		fi
+	done
+fi
+
+
+if [ ! "$(docker images -a |  grep  valgrind )" ]; then
+	build
+fi
+
 docker run -it --cap-add=SYS_PTRACE --security-opt seccomp=unconfined --security-opt apparmor=unconfined --name 42-valgrind --rm -v "$PWD:/home/vscode/src" valgrind "/bin/zsh"
